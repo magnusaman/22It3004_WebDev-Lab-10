@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T5</title>
+    <style>
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        #result {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Enter first number">
+    <input type="text" id="input2" placeholder="Enter second number">
+    <br>
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+    <br>
+    <p id="result"></p>
+    <script>
+        const buttons = document.querySelectorAll("button");
+const input1 = document.getElementById("input1");
+const input2 = document.getElementById("input2");
+const resultElement = document.getElementById("result");
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const value1 = Number.parseFloat(input1.value);
+    const value2 = Number.parseFloat(input2.value);
+    let result;
+
+    switch (button.textContent) {
+      case "+":
+        result = value1 + value2;
+        break;
+      case "-":
+        result = value1 - value2;
+        break;
+      case "*":
+        result = value1 * value2;
+        break;
+      case "/":
+        if (value2 === 0) {
+          result = "Division by zero!";
+        } else {
+          result = value1 / value2;
+        }
+        break;
+    }
+
+    resultElement.textContent = result;
+  });
+});
+
+    </script>
+</body>
+</html>

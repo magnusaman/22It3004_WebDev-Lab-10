@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Page</title>
+</head>
+<body>
+  <h1 id="heading">Welcome!</h1>
+  <button id="changeButton"> This Changes Colors & More!</button>
+
+  <script>
+    const heading = document.getElementById("heading");
+    const button = document.getElementById("changeButton");
+
+    button.addEventListener("click", () => {
+      document.body.style.backgroundColor = "lightgreen";
+
+      heading.style.color = "red";
+      heading.style.fontSize = "48pt";
+      heading.innerHTML = "<b>New</b> <i>Heading</i> Text";
+      heading.insertAdjacentHTML("afterend", "<button>Click Me</button>");
+    });
+  </script>
+</body>
+</html>

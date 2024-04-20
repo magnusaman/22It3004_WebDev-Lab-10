@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>T3</title>
+<style>
+  .changed-background {
+    background-color: rgb(46, 156, 193);
+  }
+</style>
+</head>
+<body>
+  <h1 id="heading">Welcome!</h1>
+  <button id="changeButton">Change Colors</button>
+
+  <script>
+    const heading = document.getElementById("heading");
+    const button = document.getElementById("changeButton");
+
+    button.addEventListener("click", () => {
+      alert("Changing background color!");
+      heading.classList.add("changed-background");
+      alert("Background color changed!");
+    });
+  </script>
+</body>
+</html>

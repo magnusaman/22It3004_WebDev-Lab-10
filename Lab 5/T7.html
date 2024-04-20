@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T7</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .calculator-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="number"], input[type="range"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        #tip-percentage-value {
+            margin-left: 10px;
+        }
+        
+        .results {
+            margin-top: 15px;
+        }
+        
+        .results p {
+            margin-bottom: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <div class="calculator-container">
+        <label for="bill-amount">Bill Amount:</label>
+        <input type="number" id="bill-amount" placeholder="Enter bill amount">
+        <div class="tip-options">
+            <label for="tip-percentage">Tip Percentage:</label>
+            <input type="range" min="0" max="100" value="15" id="tip-percentage">
+            <span id="tip-percentage-value">15%</span>
+        </div>
+        <div class="split-options">
+            <label for="split-number">Split Between:</label>
+            <input type="number" min="1" value="1" id="split-number">
+        </div>
+        <div class="results">
+            <p>Tip Amount: ₹<span id="tip-amount"></span></p>
+            <p>Total per Person: ₹<span id="total-per-person"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const billAmountInput = document.getElementById("bill-amount");
+const tipPercentageInput = document.getElementById("tip-percentage");
+const tipPercentageValue = document.getElementById("tip-percentage-value");
+const splitNumberInput = document.getElementById("split-number");
+const tipAmountElement = document.getElementById("tip-amount");
+const totalPerPersonElement = document.getElementById("total-per-person");
+
+function calculateTip() {
+  const billAmount = parseFloat(billAmountInput.value);
+  const tipPercentage = parseFloat(tipPercentageInput.value);
+  const splitNumber = parseInt(splitNumberInput.value);
+
+  const tipAmount = billAmount * (tipPercentage / 100);
+  const totalPerPerson = (billAmount + tipAmount) / splitNumber;
+
+  tipAmountElement.textContent = tipAmount.toFixed(2);
+  totalPerPersonElement.textContent = totalPerPerson.toFixed(2);
+}
+
+billAmountInput.addEventListener("input", calculateTip);
+tipPercentageInput.addEventListener("input", () => {
+  tipPercentageValue.textContent = `${tipPercentageInput.value}%`;
+  calculateTip();
+});
+splitNumberInput.addEventListener("input", calculateTip);
+
+calculateTip(); // Initial calculation on page load
+
+    </script>
+</body>
+</html>

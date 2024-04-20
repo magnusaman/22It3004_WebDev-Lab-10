@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T6</title>
+</head>
+<body>
+<button onclick="makePage();">Click Here</button>
+<script>
+    function makePage() {
+        // Create main container div
+        var mainDiv = document.createElement("div");
+        mainDiv.id = "mainContainer";
+        
+        // Create header h1 element
+        var header = document.createElement("h1");
+        header.innerText = "Dynamic Page";
+        mainDiv.appendChild(header);
+        
+        // Create image element
+        var img = document.createElement("img");
+        img.src = "https://via.placeholder.com/150";
+        mainDiv.appendChild(img);
+        
+        // Create paragraph element
+        var paragraph = document.createElement("p");
+        paragraph.innerText = "This is a dynamically created paragraph.";
+        mainDiv.appendChild(paragraph);
+        
+        // Create list ul element
+        var list = document.createElement("ul");
+        var items = ["Item 1", "Item 2", "Item 3"];
+        items.forEach(function(itemText) {
+          var li = document.createElement("li");
+          li.innerText = itemText;
+          list.appendChild(li);
+        });
+        mainDiv.appendChild(list);
+        
+        // Create footer paragraph element
+        var footer = document.createElement("p");
+        footer.innerText = "This is a dynamically created footer.";
+        mainDiv.appendChild(footer);
+        
+        // Append main container div to the body
+        document.body.appendChild(mainDiv);
+      }
+      
+</script>
+</body>
+</html>

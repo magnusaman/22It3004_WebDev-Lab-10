@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Inside and Outside</title>
+  <style>
+    @font-face {
+        font-family: 'HARRYP__';
+        src: url('HARRYP__.TTF') format('truetype');
+    }
+    body {
+      font-family: 'HARRYP__', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .main-section {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #alternative-content {
+      display: none; 
+      background-color: #ffcc00; 
+      padding: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome to this example page!</h2>
+
+  <div class="main-section">
+    <p id="original-content">This is the default content of the main section. It has a simple style.</p>
+    <button class="button" onclick="changeContent()">Change Content</button>
+    <p id="alternative-content">This is the alternative content.</p>
+  </div>
+
+  <p>There is more content here, even after the main section.</p>
+
+  <script>
+    function changeContent() {
+      const originalContent = document.getElementById('original-content');
+      const alternativeContent = document.getElementById('alternative-content');
+
+      if (originalContent.style.display !== 'none') {
+        originalContent.style.display = 'none';
+        alternativeContent.style.display = 'block';
+      } else {
+        originalContent.style.display = 'block';
+        alternativeContent.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>

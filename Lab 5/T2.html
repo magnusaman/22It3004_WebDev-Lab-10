@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T2</title>
+    <style>
+        #count {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px;
+        }
+        
+        #increment-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <p id="count">0</p>
+    <button id="increment-button">Click me!</button>
+    <script>
+        const button = document.getElementById("increment-button");
+        const countElement = document.getElementById("count");
+        
+        let count = 0;
+        
+        button.addEventListener("click", () => {
+          count++;
+          countElement.textContent = count;
+          countElement.style.fontSize = `${count * 0.5}rem`;
+        });
+        </script>
+</body>
+</html>

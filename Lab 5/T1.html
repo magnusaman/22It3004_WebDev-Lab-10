@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T1</title>
+   <style>
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin: 20px;
+        animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    #text-input, #spin-button {
+        display: block;
+        margin: 10px auto;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    #spin-button {
+        cursor: pointer;
+    }
+   </style>
+</head>
+<body>
+    <h2>Hello</h2>
+    <input type="text" id="text-input" placeholder="Enter your text">
+    <button id="spin-button">Spin</button>
+</body>
+    <script>
+        const button = document.getElementById("spin-button");
+        const input = document.getElementById("text-input");
+        const heading = document.querySelector("h2");  
+        button.addEventListener("click", () => {
+          const newText = input.value;
+          heading.textContent = newText;
+          heading.style.animationName = ""; 
+          setTimeout(() => {
+            heading.style.animationName = "spin";
+          }, 100);
+        });
+    </script>
+</body>
+</html>

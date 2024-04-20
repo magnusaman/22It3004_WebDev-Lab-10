@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <title>T8</title>
+    <style>
+        body {
+            background-color: rgb(255, 240, 221);
+        }
+
+        nav {
+            top: 0px;
+            width: 100%;
+            position: fixed;
+            margin-top: 0px;
+            background-color: aqua;
+            height: 40px;
+        }
+
+        nav ul {
+            margin: 7px 0px;
+
+        }
+
+        nav ul li {
+            /* height: 10px; */
+            display: inline;
+        }
+
+        a {
+            margin: 0px;
+            padding-right: 10px;
+        }
+
+        a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        section {
+            float: left;
+            width: 30%;
+            height: 80vh;
+            margin-top: 40px;
+            /* display: block; */
+            padding: 20px 0px;
+        }
+
+        aside {
+            float: left;
+            margin-top: 40px;
+            width: 70%;
+            height: 80vh;
+            text-align: center;
+        }
+
+        main {
+            margin-top: 60px;
+            height: 80vh;
+        }
+
+        footer {
+            clear: both;
+            /* margin-top: 530px; */
+            background-color: aqua;
+            text-align: center;
+            width: 100%;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            color: white;
+            display: block;
+            padding: 0px 15px;
+            /* line-height: 70px; */
+            font-size: 20px;
+            background: #063247;
+            transition: .5s;
+        }
+        nav ul ul {
+            position: absolute;
+            top: 85px;
+            border-top: 3px solid #23dbdb;
+            opacity: 0;
+            visibility: hidden;
+        }
+        nav ul li:hover>ul {
+            top: 30px;
+            opacity: 1;
+            visibility: visible;
+            transition: .3s linear;
+        }
+
+        nav ul ul li {
+            color: aliceblue;
+            background-color: #063247;
+            width: 95px;
+            margin-left: 0px;
+            display: list-item;
+            position: relative;
+            border: 1px solid #042331;
+            border-top: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a>
+                <ul>
+                    <li>Blog</li>
+                    <li>My journey</li>
+                </ul>
+            </li>
+            <li>
+            <a href="hobbieshtml">
+            Hobbies
+            </a></li>
+            <li><a href="fav.html">
+            Favourite Teams
+            </a></li>
+        </ul>
+    </nav>
+    <section>
+        <h3>
+            This is section
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iusto, repellendus est magnam accusamus
+            minima eligendi accusantium? Eveniet voluptatem, repellat numquam a consectetur obcaecati quaerat ex
+            repudiandae rerum pariatur ad, quo expedita? Iste exercitationem maxime repudiandae, illo adipisci
+            architecto quas nisi mollitia minus cumque dolore veritatis omnis delectus possimus, quis neque provident
+            nostrum! Provident repudiandae consectetur voluptas error inventore magni natus placeat, dignissimos soluta
+            rem possimus nihil quasi assumenda quam, officia unde incidunt, optio laborum culpa asperiores! Error,
+            repellat. Temporibus officiis blanditiis at id qui itaque, laudantium officia nobis consequatur!
+        </p>
+    </section>
+    <aside>
+        <h3>
+            This is aside
+        </h3>
+        <img src="314px-Ace_of_spades.svg.png" alt="image">
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, nemo! </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga blanditiis amet temporibus eligendi ratione
+            quasi tempore quae id reiciendis at.</p>
+    </aside>
+    <footer>
+        Copyright area Contact us
+    </footer>
+</body>
+
+</html>

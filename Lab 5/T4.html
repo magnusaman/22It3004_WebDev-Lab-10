@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T4</title>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      
+</style>
+</head>
+<body>
+<h2>Dynamic Table</h2>
+<table id="dynamicTable">
+  <tr>
+    <th>Row</th>
+    <th>Sum</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+</table>
+<button onclick="addRow()">Add Row</button>
+
+<script>
+    function addRow() {
+        var table = document.getElementById("dynamicTable");
+        var rows = table.getElementsByTagName("tr");
+        var lastRow = rows[rows.length - 1];
+        var prevRow = rows[rows.length - 2];
+        var newRow = table.insertRow(-1);
+        
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        
+        var currentRowNum = parseInt(lastRow.cells[0].innerText) + 1;
+        var sum = parseInt(lastRow.cells[1].innerText) + parseInt(prevRow.cells[1].innerText);
+        
+        cell1.innerText = currentRowNum;
+        cell2.innerText = sum;
+      }
+       
+</script>
+</body>
+</html>

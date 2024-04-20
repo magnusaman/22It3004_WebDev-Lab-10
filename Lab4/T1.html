@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>T1</title>
+</head>
+<body>
+  <h1 id="heading">Welcome!</h1>
+  <button id="changeButton">This Changes Colors</button>
+
+  <script>
+    const heading = document.getElementById("heading");
+    const button = document.getElementById("changeButton");
+
+    button.addEventListener("click", () => {
+      document.body.style.backgroundColor = "blue";
+      heading.textContent = "Colors Changed!";
+    });
+  </script>
+</body>
+</html>

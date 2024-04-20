@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3</title>
+    <style>
+        #number-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+        
+        #number-list li {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul id="number-list"></ul>
+    <button id="add-button">Add Number</button>
+    <script>
+        const button = document.getElementById("add-button");
+const list = document.getElementById("number-list");
+
+let count = 0;
+
+button.addEventListener("click", () => {
+  count++;
+  const listItem = document.createElement("li");
+  listItem.textContent = count;
+  list.appendChild(listItem);
+});
+
+    </script>
+</body>
+</html>

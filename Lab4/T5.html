@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="heading">Heading</h1>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      var colors = ["red", "green", "blue"];
+      var randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+      document.getElementById("heading").style.color = randomColor; //
+    }
+  </script>
+</body>
+</html>
