@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<style>
+    body{
+        background-image: url('img/61c642c66844e8b5393b72f1ee917101.jpg');
+    }
+      .content .overview{
+        display: flex;
+        justify-content: center;
+      }
+      .content .overview span{
+        font-size: 30px;
+        font-weight: 900;
+      }
+      .content .subjects{
+        color: #fff;
+        font-size: 25px;
+        font-weight: 900;
+      }
+      .content .all_classes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        margin-top: 50px;
+        font-weight: 900;
+        transition: all 0.5s ease-in;
+    }
+    .content .all_classes > div{
+        height: 300px;
+        border: 1px #fff solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .content .all_classes > div:hover{
+        opacity: 0.7;
+        transform: scale(1.10);
+    }
+    .content .all_classes a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .content .all_classes .text_area{
+        padding: 100px;
+    }
+    .content .all_classes .core_classes{
+        background: linear-gradient(rgba(20,20,20, 0.7),
+        rgba(20,20,20, 0.6)), url('/img/Core_Classes.webp');
+    }
+    .content .all_classes .electives{
+        background: linear-gradient(rgba(20,20,20, 0.7),
+        rgba(20,20,20, 0.6)), url('/img/New-Project-17.webp');
+        background-size: cover;
+    }
+    .content .all_classes .extra_cirricular_subjects{
+        background: linear-gradient(rgba(0,0,0, 0.7),
+        rgba(0,0,0, 0.6)), url('/img/EXTRA.avif');
+        background-size: cover;
+    }
+    .text_area{
+        font-size: 12px;
+        text-align: center;
+    }
+</style>
+    <title>Courses</title>
+</head>
+<body>
+    <nav class="hamburger">
+        <label class="logo"> <a href="#">
+            <span style="--index: 1;">H</span>
+            <span style="--index: 2;">o</span>
+            <span style="--index: 3;">g</span>
+            <span style="--index: 4;">w</span>
+            <span style="--index: 5;">a</span>
+            <span style="--index: 6;">r</span>
+            <span style="--index: 7;">t</span>
+            <span style="--index: 8;">s</span>
+            <span style="--index: 9;"></span>
+            <span style="--index: 10;"></span>
+            <span style="--index: 1;">S</span>
+            <span style="--index: 2;">c</span>
+            <span style="--index: 3;">h</span>
+            <span style="--index: 4;">o</span>
+            <span style="--index: 5;">o</span>
+            <span style="--index: 6;">l</span>
+            <span style="--index: 7;"> </span>
+            <span style="--index: 8;"> </span>
+            <span style="--index: 1;">O</span>
+            <span style="--index: 2;">f</span>
+            <span style="--index: 3;"> </span>
+            <span style="--index: 1;">W</span>
+            <span style="--index: 2;">i</span>
+            <span style="--index: 3;">t</span>
+            <span style="--index: 4;">c</span>
+            <span style="--index: 5;">h</span>
+            <span style="--index: 6;">c</span>
+            <span style="--index: 7;">r</span>
+            <span style="--index: 8;">a</span>
+            <span style="--index: 9;">f</span>
+            <span style="--index: 10;">t</span>
+            <span style="--index: 11;"> </span>
+            <span style="--index: 12;"> </span>
+            <span style="--index: 1;">A</span>
+            <span style="--index: 2;">n</span>
+            <span style="--index: 3;">d</span>
+            <span style="--index: 4;"> </span>
+            <span style="--index: 5;"> </span>
+            <span style="--index: 1;">W</span>
+            <span style="--index: 2;">i</span>
+            <span style="--index: 3;">z</span>
+            <span style="--index: 4;">a</span>
+            <span style="--index: 5;">r</span>
+            <span style="--index: 6;">d</span>
+            <span style="--index: 7;">r</span>
+            <span style="--index: 8;">y</span>
+        </a>
+        </label>
+        <br>  
+        <!-- Menu item with submenu -->
+        <div class="menu">
+            <label class="logo">
+                <a href="#">
+                    Menu
+                </a>
+            </label>
+            <!-- Submenu -->
+            <ul class="sub-menu">
+                <li class="menu-item"><a class="sub-menu__links" href="#">Registration Form</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="Houses.html">Houses Of Hogwarts</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="courses.html">Courses Offered</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="about.html">Enchanting Tale of Hogwarts</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="cursor"></div>
+    <div id="flashlight"></div>
+    <script src="script.js"></script>
+        <div class="content">
+            <p class="subjects">Courses: </p>
+            <div class="all_classes">
+                <div class="core_classes">
+                    <a href="core_classes.html">
+                        <div class="text_area">
+                            <h1>Core Courses</h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="electives">
+                    <a href="electives.html">
+                        <div class="text_area">
+                            <h1>Elective Courses</h1>
+                        </div>
+                    </a>
+                </div>
+                <div class="extra_cirricular_subjects">
+                    <a href="extra_curricular_subjects.html">
+                        <div class="text_area">
+                            <h1>Extra-curricular Courses</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

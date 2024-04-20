@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts School Of Witchcraft And Wizardry</title>
+    <link rel="icon" href="/img/hogwarts-7917.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initClock()">
+    <nav class="hamburger">
+        <label class="logo"> <a href="#">
+            <span style="--index: 1;">H</span>
+            <span style="--index: 2;">o</span>
+            <span style="--index: 3;">g</span>
+            <span style="--index: 4;">w</span>
+            <span style="--index: 5;">a</span>
+            <span style="--index: 6;">r</span>
+            <span style="--index: 7;">t</span>
+            <span style="--index: 8;">s</span>
+            <span style="--index: 9;"></span>
+            <span style="--index: 10;"></span>
+            <span style="--index: 1;">S</span>
+            <span style="--index: 2;">c</span>
+            <span style="--index: 3;">h</span>
+            <span style="--index: 4;">o</span>
+            <span style="--index: 5;">o</span>
+            <span style="--index: 6;">l</span>
+            <span style="--index: 7;"> </span>
+            <span style="--index: 8;"> </span>
+            <span style="--index: 1;">O</span>
+            <span style="--index: 2;">f</span>
+            <span style="--index: 3;"> </span>
+            <span style="--index: 1;">W</span>
+            <span style="--index: 2;">i</span>
+            <span style="--index: 3;">t</span>
+            <span style="--index: 4;">c</span>
+            <span style="--index: 5;">h</span>
+            <span style="--index: 6;">c</span>
+            <span style="--index: 7;">r</span>
+            <span style="--index: 8;">a</span>
+            <span style="--index: 9;">f</span>
+            <span style="--index: 10;">t</span>
+            <span style="--index: 11;"> </span>
+            <span style="--index: 12;"> </span>
+            <span style="--index: 1;">A</span>
+            <span style="--index: 2;">n</span>
+            <span style="--index: 3;">d</span>
+            <span style="--index: 4;"> </span>
+            <span style="--index: 5;"> </span>
+            <span style="--index: 1;">W</span>
+            <span style="--index: 2;">i</span>
+            <span style="--index: 3;">z</span>
+            <span style="--index: 4;">a</span>
+            <span style="--index: 5;">r</span>
+            <span style="--index: 6;">d</span>
+            <span style="--index: 7;">r</span>
+            <span style="--index: 8;">y</span>
+        </a>
+        </label>
+        <br>  
+        <!-- Menu item with submenu -->
+        <div>
+            <button class="btnLogin-popup">Login</button>
+        </div>
+        <div class="menu">
+            <label class="logo">
+                <a href="#">
+                    Menu
+                </a>
+            </label>
+            <!-- Submenu -->
+            <ul class="sub-menu">
+                <li class="menu-item"><a class="sub-menu__links" href="#">Registration Form</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="Houses.html">Houses Of Hogwarts</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="courses.html">Courses Offered</a></li>
+                <li class="menu-item"><a class="sub-menu__links" href="about.html">Enchanting Tale of Hogwarts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cursor"></div>
+    <div id="flashlight"></div>
+    <script src="script.js"></script>
+    <video autoplay muted loop id="video-bg">
+        <source src="/img/yGxg6YWJ-hogwarts-legacy-moewalls-com.mp4" type="video/mp4">
+    </video>
+    
+    <h1 id="time"></h1>
+    <div class="date">
+        <span id="dayname">Day,</span>
+        <span id="mon">Month</span>
+        <span id="daynum">00,</span>
+        <span id="Year">Year</span>
+    </div>
+    <br>
+    <br>
+    <div class="Quotes">PHOENIX PHRASES
+       <hr>
+        <h2>"It is our choices, Harry, that show what we truly are, far more than our abilities." - Albus Dumbledore</h2>
+        <hr>
+        
+    </div>
+    <script>
+        let time = document.getElementById("time");
+        setInterval(() => {
+            let d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+        }, 1000);
+
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 6){
+                counter = 1;
+            }
+        },5000);
+    </script>
+    <div class="container">
+        <div
+          class="box box-1"
+          style="--img: url(https://i.postimg.cc/52twVZMr/wp4395550-minerva-mcgonagall-wallpapers.jpg)"
+          data-text="Headmaster Minerva McGonagall"
+        ></div>
+        <div
+          class="box box-2"
+          style="--img: url(https://i.postimg.cc/4yN3cRwk/flitwick.webp)"
+          data-text="Professor Filius Flitwick"
+        ></div>
+        <div
+          class="box box-3"
+          style="--img: url(https://i.postimg.cc/mg6Dv5wB/harry-with-wand-deathly-hallows-part-2-portrait.jpg)"
+          data-text="Professor Harry Potter"
+        ></div>
+        <div
+          class="box box-4"
+          style="--img: url(https://i.postimg.cc/XqPh49zG/Horace.jpg)"
+          data-text="Professor Horace Slughorn"
+        ></div>
+        <div
+          class="box box-5"
+          style="--img: url(https://i.postimg.cc/xqDF7nZB/Longbottom.webp)"
+          data-text="Professor Neville Longbottom"
+        ></div>
+      </div>
+</body>
+
+</html>
